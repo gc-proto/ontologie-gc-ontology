@@ -1,0 +1,14 @@
+@prefix gc: <https://test.canada.ca/ontologie-gc-ontology/gc-ontology.ttl#> .
+@prefix cra: <https://test.canada.ca/ontologie-gc-ontology/institutions/canada-revenue-agency/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+cra:institution a gc:Institution ;
+    gc:name "Canada Revenue Agency"@en, "Agence du revenu du Canada"@fr ;
+    gc:description "The Canada Revenue Agency (CRA) is a government institution responsible for administering tax laws and delivering social and economic benefit programs."@en,
+                   "L'Agence du revenu du Canada (ARC) est une institution gouvernementale responsable de l'application des lois fiscales et de la prestation des programmes de prestations sociales et économiques."@fr ;
+    gc:administers cra:canada-child-benefit ;
+    gc:url "https://www.canada.ca/en/revenue-agency.html"@en,
+           "https://www.canada.ca/fr/agence-revenu.html"@fr .
+
+cra:canada-child-benefit a gc:Program .

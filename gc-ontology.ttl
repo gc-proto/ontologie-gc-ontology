@@ -42,3 +42,10 @@ gc:offers a rdf:Property ;
     rdfs:comment "A program that offers a government service."@en,
                  "Un programme qui offre un service gouvernemental."@fr .
 
+gc:url a rdf:Property ;
+    rdfs:domain [ rdf:type owl:Class ;
+                  owl:unionOf (gc:Institution gc:Program gc:Service) ] ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "url"@en, "url"@fr ;
+    rdfs:comment "The URL of a government institution, program, or service."@en,
+                 "L'URL d'une institution, d'un programme ou d'un service gouvernemental."@fr .
