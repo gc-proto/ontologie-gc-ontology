@@ -1,0 +1,44 @@
+@prefix gc: <http://www.example.com/gc-ontology/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# ...
+
+gc:name a rdf:Property ;
+    rdfs:domain [ rdf:type owl:Class ;
+                  owl:unionOf (gc:Institution gc:Program gc:Service) ] ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "name"@en, "nom"@fr ;
+    rdfs:comment "The name of a government institution, program, or service."@en,
+                 "Le nom d'une institution, d'un programme ou d'un service gouvernemental."@fr .
+
+gc:description a rdf:Property ;
+    rdfs:domain [ rdf:type owl:Class ;
+                  owl:unionOf (gc:Institution gc:Program gc:Service) ] ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "description"@en, "description"@fr ;
+    rdfs:comment "A description of a government institution, program, or service."@en,
+                 "Une description d'une institution, d'un programme ou d'un service gouvernemental."@fr .
+
+gc:eligibility a rdf:Property ;
+    rdfs:domain gc:Program ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "eligibility"@en, "admissibilité"@fr ;
+    rdfs:comment "The eligibility criteria for a government program."@en,
+                 "Les critères d'admissibilité pour un programme gouvernemental."@fr .
+
+gc:administers a rdf:Property ;
+    rdfs:domain gc:Institution ;
+    rdfs:range gc:Program ;
+    rdfs:label "administers"@en, "administre"@fr ;
+    rdfs:comment "An institution that administers a government program."@en,
+                 "Une institution qui administre un programme gouvernemental."@fr .
+
+gc:offers a rdf:Property ;
+    rdfs:domain gc:Program ;
+    rdfs:range gc:Service ;
+    rdfs:label "offers"@en, "offre"@fr ;
+    rdfs:comment "A program that offers a government service."@en,
+                 "Un programme qui offre un service gouvernemental."@fr .
+
