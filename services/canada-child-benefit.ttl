@@ -15,13 +15,13 @@ ccb:service a gc:Service ;
     gc:eligibility_fr "Vous êtes un citoyen canadien, résident permanent, personne protégée, résident temporaire ou Indien au sens de la Loi sur les Indiens",
                    "Vous êtes principalement responsable des soins et de l'éducation de votre enfant.",
                    "Vous vivez avec l'enfant et l'enfant a moins de 18 ans.",
-                   "Le revenu net ajusté de votre famille est inférieur au seuil établi pour la taille de votre famille. ;
+                   "Le revenu net ajusté de votre famille est inférieur au seuil établi pour la taille de votre famille." ;
     gc:step_en "Make sure you have all the necessary documents and information, such as your Social Insurance Number, your child's birth certificate, and your marital status.",
             "Fill out the Canada Child Benefit application form, which can be found on the Canada Revenue Agency website.",
-            "Submit your application to the Canada Revenue Agency. ;
+            "Submit your application to the Canada Revenue Agency." ;
     gc:step_fr "Assurez-vous d'avoir tous les documents et renseignements nécessaires, tels que votre numéro d'assurance sociale, le certificat de naissance de votre enfant et votre état civil.",
             "Remplissez le formulaire de demande d'Allocation canadienne pour enfants, disponible sur le site Web de l'Agence du revenu du Canada.",
-            "Soumettez votre demande à l'Agence du revenu du Canada. ;
+            "Soumettez votre demande à l'Agence du revenu du Canada." ;
     gc:administeredBy cra:institution .
 
 cra:institution a gc:Institution .
