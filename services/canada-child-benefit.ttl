@@ -1,23 +1,28 @@
-@prefix gc: <https://test.canada.ca/ontologie-gc-ontology/gc-ontology.ttl#> .
-@prefix svc: <https://test.canada.ca/ontologie-gc-ontology/services/> .
-
-svc:ccb a gc:Service ;
-    gc:name "Canada Child Benefit" ;
+gc:name "Canada Child Benefit" ;
     gc:description """
-        The Canada Child Benefit is a tax-free monthly payment made to eligible families to help them with the cost of raising children.
+        The Canada Child Benefit (CCB) is a tax-free monthly payment to eligible families to assist with the cost of raising children under 18 years of age. It includes the child disability benefit and may incorporate related provincial and territorial programs. Administered by the Canada Revenue Agency (CRA), the CCB aims to provide financial support to reduce the burden of parenting costs.
     """ ;
     gc:eligibility """
-        You are a Canadian citizen, permanent resident, protected person, temporary resident, or an Indian under the Indian Act.
-        You are primarily responsible for the care and upbringing of your child.
-        You live with the child, and the child is under 18 years of age.
+        You live with a child who is under 18 years of age
+        You are primarily responsible for the care and upbringing of the child
+        You are a resident of Canada for tax purposes
+        You or your spouse or common-law partner must be any of the following: a Canadian citizen, a permanent resident, a protected person, a temporary resident who has lived in Canada for the previous 18 months, and who has a valid permit in the 19th month other than one that states "does not confer status" or "does not confer temporary resident status, or n individual who is registered, or entitled to be registered under the Indian Act
         Your adjusted family net income is below the threshold for your family size.
+        Primarily responsible means: the person who is primarily responsible for the care and upbringing of the child should apply for the CCB. That person is responsible for things such as, supervising the child’s daily activities and needs, making sure the child’s medical needs are met, and arranging for child care when necessary.
     """ ;
-    gc:steps """
-        Make sure you have all the necessary documents and information, such as your Social Insurance Number, your child's birth certificate, and your marital status.
-        Fill out the Canada Child Benefit application form, which can be found on the Canada Revenue Agency website.
-        Submit your application to the Canada Revenue Agency.
+    gc:how_to_apply """
+        You should apply for the Canada child benefit (CCB) as soon as any of the following situations happen: your child is born; a child starts to live with you, or returns to live with you after a temporary period with someone else; you begin, end, or change a shared custody arrangement; you get custody of a child; you, or your spouse or common-law partner, start to meet the eligibility conditions under Who can apply
+        Through birth registration: You can apply for the CCB when you register the birth of your newborn with your province/territory. In most cases, the birth registration is done by paper form at the hospital or birthing centre. Residents of Ontario, Quebec, British Columbia and Alberta also have the option to register online.
+        Through My Account: If you didn't apply for the CCB when you registered the birth of your newborn, you can apply online using My Account (your personal CRA account). 1. Sign in to My Account; 2. From the Overview page, click on Benefits and credits from the Navigation menu on the left side of the screen; 3. From the Benefits and credits page, locate the Child information and click on + Add. 4. You will be asked to complete 3 steps: Confirm your contact information, your marital status and your citizenship, Enter your child’s information, and Review and submit your application; 5. A confirmation screen will display the status of your application. If you're asked to submit additional documents, such as proof of birth for the child, select the "Submit documents" button.
+        By mail: Fill out and sign Form RC66, Canada Child Benefits Application. Include any additional documents needed. Mail the form to your tax centre
     """ ;
     gc:fees "There is no fee associated with the Canada Child Benefit" ;
-    gc:amount "You could get up to $2,500" ;
-    gc:processing_time "Unknown" ;
-    gc:service_standard "Unknown" .
+    gc:amount """
+        The amount you can can get depends on your Adjusted family net incom (AFNI) and the number of child in your care.
+        If you have one child in your care: If you AFNI is below $34,863; You get the maximum amount and it is not reduced. For your eligible child under 6 years of age: $7,437 per year ($619.75 per month); aged 6 to 17 years of age: $6,275 per year ($522.91 per month). If your AFNI is greater than $34,863 up to $75,537: Your total payment is reduced by 7% of your income greater than $34,863. If your AFNI is greis greater than $75,537: Your total payment is reduced by: $2,847 + 3.2% of your income greater than $75,537. 
+        If you have two children in your care: If you AFNI is below $34,863; You get the maximum amount and it is not reduced. For your eligible child under 6 years of age: $7,437 per year ($619.75 per month); aged 6 to 17 years of age: $6,275 per year ($522.91 per month). If your AFNI is greater than $34,863 up to $75,537: Your total payment is reduced by 13.5% of your income greater than $34,863. If your AFNI is greis greater than $75,537: Your total payment is reduced by: $5,491 + 5.7%  of your income greater than $75,537.
+        If you have three children in your care: If you AFNI is below $34,863; You get the maximum amount and it is not reduced. For your eligible child under 6 years of age: $7,437 per year ($619.75 per month); aged 6 to 17 years of age: $6,275 per year ($522.91 per month). If your AFNI is greater than $34,863 up to $75,537: Your total payment is reduced by 19% of your income greater than $34,863. If your AFNI is greis greater than $75,537: Your total payment is reduced by: $7,728 + 8%  of your income greater than $75,537.
+        If you have four children or more in your care: If you AFNI is below $34,863; You get the maximum amount and it is not reduced. For your eligible child under 6 years of age: $7,437 per year ($619.75 per month); aged 6 to 17 years of age: $6,275 per year ($522.91 per month). If your AFNI is greater than $34,863 up to $75,537: Your total payment is reduced by 23% of your income greater than $34,863. If your AFNI is greis greater than $75,537: Your total payment is reduced by: $9,355 + 9.5%  of your income greater than $75,537.
+
+    """ ;
+    gc:processing_time "If you apply by mail, you should receive your payment within 11 weeks. If you apply through My account, you should receive your payment within 8 weeks" ;
