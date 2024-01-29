@@ -29,4 +29,7 @@ svc:ccb a gc:Service ;
         If you have four children or more in your care: If you AFNI is below $34,863; You get the maximum amount and it is not reduced. For your eligible child under 6 years of age: $7,437 per year ($619.75 per month); aged 6 to 17 years of age: $6,275 per year ($522.91 per month). If your AFNI is greater than $34,863 up to $75,537: Your total payment is reduced by 23% of your income greater than $34,863. If your AFNI is greis greater than $75,537: Your total payment is reduced by: $9,355 + 9.5%  of your income greater than $75,537.
 
     """ ;
-    gc:processing_time "If you apply by mail, you should receive your payment within 11 weeks. If you apply through My account, you should receive your payment within 8 weeks" ;
+    gc:processing_time """
+    If you apply by mail, you should receive your payment within 11 weeks. If you apply through My account, you should receive your payment within 8 weeks" 
+    
+    """.
