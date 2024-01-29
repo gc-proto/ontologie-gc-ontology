@@ -1,4 +1,8 @@
-gc:name "Canada Child Benefit" ;
+@prefix gc: <https://test.canada.ca/ontologie-gc-ontology/gc-ontology.ttl#> .
+@prefix svc: <https://test.canada.ca/ontologie-gc-ontology/services/> .
+
+svc:ccb a gc:Service ;
+    gc:name "Canada Child Benefit" ;
     gc:description """
         The Canada Child Benefit (CCB) is a tax-free monthly payment to eligible families to assist with the cost of raising children under 18 years of age. It includes the child disability benefit and may incorporate related provincial and territorial programs. Administered by the Canada Revenue Agency (CRA), the CCB aims to provide financial support to reduce the burden of parenting costs.
     """ ;
