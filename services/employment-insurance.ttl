@@ -1,0 +1,30 @@
+@prefix gc: <https://test.canada.ca/ontologie-gc-ontology/gc-ontology.ttl#> .
+@prefix svc: <https://test.canada.ca/ontologie-gc-ontology/services/> .
+
+svc:ei a gc:Service ;
+    gc:name "Employment Insurance" ;
+    gc:description """
+        Employment Insurance (EI) provides temporary financial assistance to unemployed Canadians who have lost their job through no fault of their own while they look for work or upgrade their skills. It also offers special benefits to workers who take time off due to specific life events (e.g., illness, pregnancy, caring for a newborn or adopted child, caring for a critically ill family member).
+    """ ;
+    gc:eligibility """
+        To receive EI Regular benefits, you must:
+        - Be employed in insurable employment.
+        - Lose your job through no fault of your own.
+        - Be without work and without pay for at least 7 consecutive days in the last 52 weeks.
+        - Have worked for the required number of insurable employment hours in the last 52 weeks or since the start of your last EI claim, whichever is shorter.
+        - Be ready, willing, and capable of working each day.
+        - Be actively looking for work (you must keep a written record of employers you contact, including when you contacted them).
+    """ ;
+    gc:how_to_apply """
+        To apply for EI benefits:
+        - Complete the online application which takes about 1 hour to complete.
+        - You'll need your social insurance number (SIN), the last name at birth of one of your parents, your mailing and residential addresses, including postal codes, and your banking information for direct deposit.
+        - Submit bi-weekly reports via internet or telephone to continue receiving benefits.
+    """ ;
+    gc:fees "There are no fees to apply for EI benefits." ;
+    gc:amount """
+        The basic rate for calculating EI benefits is 55% of your average insurable weekly earnings, up to a maximum amount. As of January 1, 2024, the maximum yearly insurable earnings amount is $63,200, which means you can receive up to a maximum of $668 per week.
+    """ ;
+    gc:processing_time """
+        The standard processing time for EI claims is within 28 days of filing the application. Payments are issued only after bi-weekly reports have been processed.
+    """.
