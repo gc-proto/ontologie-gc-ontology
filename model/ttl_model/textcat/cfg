@@ -1,0 +1,8 @@
+{
+  "labels":[
+    "https://test.canada.ca/ontologie-gc-ontology/services/canada-child-benefit.ttl",
+    "https://test.canada.ca/ontologie-gc-ontology/services/employment-insurance.ttl"
+  ],
+  "threshold":0.0,
+  "positive_label":null
+}

@@ -1,0 +1,12 @@
+{
+  "labels":[
+    "eligibility",
+    "amount",
+    "description",
+    "processing_time",
+    "fees",
+    "how_to_apply"
+  ],
+  "threshold":0.0,
+  "positive_label":null
+}
