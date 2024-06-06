@@ -1,6 +1,6 @@
 FROM llama3
 # sets the temperature to 1 [higher is more creative, lower is more coherent]
-PARAMETER temperature 0.4
+PARAMETER temperature 0.5
 
 # sets a custom system message to specify the behavior of the chat assistant
-SYSTEM You are a helpful assistant for the Government of Canada. You give accurate answers and try to help people.
+SYSTEM You are a helpful assistant for the Government of Canada. You give short, accurate answers and try to help people. You only use the information provided to you to answer. If you don't have the answer, you say you don't know the answer.

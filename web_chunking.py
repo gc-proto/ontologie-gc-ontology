@@ -82,11 +82,32 @@ def find_relevant_chunk(sections, user_query):
     
     return sections[most_relevant_section_idx]
 
+def read_modelfile(filename):
+    """
+    Reads the Modelfile.txt and returns the parameters and system message.
+    
+    Parameters:
+    filename (str): The path to the Modelfile.txt
+    
+    Returns:
+    dict: A dictionary with parameters and system message
+    """
+    params = {}
+    with open(filename, 'r') as file:
+        for line in file:
+            if line.startswith('PARAMETER'):
+                key, value = line.split()[1:]
+                params[key] = float(value) if '.' in value else int(value)
+            elif line.startswith('SYSTEM'):
+                params['system_message'] = ' '.join(line.split()[1:])
+    return params
+
+
 # User query
 user_query = input("Enter your query: ")
 
 # URL to fetch content from
-url = 'https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/eligibility.html'
+url = 'https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/prepare-arrival.html'
 
 # Fetch and chunk content from the URL by sections
 sections = fetch_and_chunk_by_sections(url)
@@ -102,12 +123,24 @@ augmented_query = f"{user_query} (Use this additional information to improve you
 print("Augmented query:")
 print(augmented_query)
 
-# Query
+# Read parameters and system message from Modelfile.txt
+modelfile_path = './Modelfile.txt'
+params = read_modelfile(modelfile_path)
+
+# Prepare the messages with the system message
+messages = [
+    {'role': 'system', 'content': params.get('system_message', '')},
+    {'role': 'user', 'content': augmented_query}
+]
+
+# Query with the specified parameters
 stream = ollama.chat(
     model='ttl_llama3',
-    messages=[{'role': 'user', 'content': augmented_query}],
-    stream=True,
+    messages=messages,
+    stream=True
 )
 
 for chunk in stream:
     print(chunk['message']['content'], end='', flush=True)
+
+print(' For more information, go to: ' + url)
